@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE imgdsp>
+<imgdsp>
+    <programs>
+        <program name="License Plate Recognition">
+        </program>
+    </programs>
+    <in_imgs>
+		<in_img file_name="BG-1287-DL_002.jpg"/>
+		<in_img file_name="BG-1431-PM_001.jpg"/>
+		<in_img file_name="BG-1148-EU_001.jpg"/>
+		<in_img file_name="KG-221-UO_003.jpg"/>
+		<in_img file_name="VS-068-OV_001.jpg"/>
+		<in_img file_name="BG-1685-ZV_002.jpg"/>
+		<in_img file_name="BG-1232-TZ_003.jpg"/>
+		<in_img file_name="SU-101-LG_001.jpg"/>
+		<in_img file_name="VS-037-LT_001.jpg"/>
+		<in_img file_name="BG-948-OL_001.jpg"/>
+		<in_img file_name="NS-490-IB_001.jpg"/>
+		<in_img file_name="SO-129-HP_002.jpg"/>
+		<in_img file_name="SP-022-CT_002.jpg"/>
+		<in_img file_name="SU-113-GN_001.jpg"/>
+		<in_img file_name="VA-142-DV_001.jpg"/>
+		<in_img file_name="BG-1884-IM_001.jpg"/>
+        <in_img file_name="BG-925-ZI_002.jpg"/>
+		<in_img file_name="BG-925-ZI_001.jpg"/>	
+		<in_img file_name="KS-145-GN_001.jpg"/>	
+		<in_img file_name="SP-022-CT_002.jpg"/>
+        <in_img file_name="SU-127-AC_001.jpg"/>
+		<in_img file_name="NS-460-ZH_001.jpg"/>
+		<in_img file_name="RU-034-FĆ_002.jpg"/>
+		<in_img file_name="NS-501-VL_001.jpg"/>
+		<in_img file_name="KG-100-HC_002.jpg"/>
+		
+    </in_imgs>
+    <out_imgs>
+        <out_img file_name="processed_img.jpg"/>
+    </out_imgs>
+</imgdsp>
