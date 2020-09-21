@@ -77,7 +77,7 @@ void licensePlateRecognition(const QImage& inImgs, char U_buff[], char V_buff[],
         }
     }
 
-    vectorOfPossiblePlates = detectCharsInPlates(vectorOfPossiblePlates);
+    vectorOfPossiblePlates = detectPlateInPlates(vectorOfPossiblePlates);
 
     if (vectorOfPossiblePlates.empty()) {
 
@@ -89,17 +89,20 @@ void licensePlateRecognition(const QImage& inImgs, char U_buff[], char V_buff[],
         RGBtoYUV420(copyImage.bits(), xSize, ySize, Y_buff, U_buff, V_buff);
     }
     else {
-
         sort(vectorOfPossiblePlates.begin(), vectorOfPossiblePlates.end(), PossiblePlate::sortDescendingByNumberOfChars); 
 
         PossiblePlate licPlate = vectorOfPossiblePlates.front();
         string text;
 
+        //filterPlateImage(licPlate);
+
         cv::imshow("imgPlate", licPlate.imgPlate);
+        cv::imshow("imgPlateT", licPlate.imgThresh);
         cv::waitKey(0);
 
-        //writeLicensePlateCharsOnImage(copyImage, licPlate);
         drawRedRectangleAroundPlate(copyImage,licPlate);
+
+        cv::imwrite("out.jpg", licPlate.imgThresh);
         
         RGBtoYUV420(copyImage.bits(), xSize, ySize, Y_buff, U_buff, V_buff);
 
